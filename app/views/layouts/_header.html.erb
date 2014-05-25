@@ -1,0 +1,15 @@
+<div class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a href="#" class="navbar-brand">Message Board</a>
+    </div>
+  </div>
+  <ul class="nav navbar-nav">
+    <li class="active">
+      <a href="/">Home</a>
+    </li>
+  </ul>
+  <% if user_signed_in? %>
+    <p class="navbar-text pull-right"><%= current_user.email %> | <%= link_to 'Log Out', destroy_user_session_path, method: :delete %></p>
+  <% end %>
+</div>
